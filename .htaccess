@@ -1,0 +1,34 @@
+# Ensure mod_rewrite is enabled
+RewriteEngine On
+
+# Error pages
+ErrorDocument 401 /errors.php
+ErrorDocument 403 /errors.php
+ErrorDocument 404 /errors.php
+ErrorDocument 500 /errors.php
+
+# Remove .html extension from URL (internal rewrite)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+
+# Remove .php extension from URL (internal rewrite)
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^.]+)$ $1.php [L]
+
+# Redirect requests with .html to clean URL (if accessed directly)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Redirect requests with .php to clean URL (if accessed directly)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Remove "index" from the URL (ensure this is not applied recursively)
+RewriteRule ^index$ / [R=301,L]
+
+# App Router
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^ index.php [QSA,L]
