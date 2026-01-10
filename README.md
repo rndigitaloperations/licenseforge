@@ -68,9 +68,7 @@ The required cron command is displayed in the **admin dashboard**.
 2. Create a MySQL database
 3. Open your browser and navigate to:
 ```
-
 https://yourdomain.tld/installer
-
 ```
 4. Follow the on-screen steps to complete the installation
 
@@ -93,16 +91,12 @@ https://yourdomain.tld/installer
 
 - **Admin Dashboard:**  
 ```
-
-/dashboard
-
+https://yourdomain.tld/dashboard
 ```
 
 - **User Dashboard:**  
 ```
-
-/dashboard/me
-
+https://yourdomain.tld/dashboard/me
 ```
 
 ## ⚙️ Configuration
