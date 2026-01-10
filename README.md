@@ -75,6 +75,8 @@ https://yourdomain.tld/installer
 ✅ After a successful installation:
 - The installer **automatically disables itself**
 - Accessing `/installer` will return a **404 page**
+- All configuration options you entered during installation are saved in **config.php**
+- You can **edit `config.php` manually later** to change database settings, mail settings, or other settings
 
 > ⚠️ **Note:**  
 > Before running the installer, accessing the application may result in a default  
