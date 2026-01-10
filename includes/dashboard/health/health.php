@@ -4,19 +4,7 @@ $config = include $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 $meta = $config['meta'];
 require $_SERVER['DOCUMENT_ROOT'] . '/vendor/db.php';
 
-$appVersion = 'v1.1.1';
-$apiUrl = 'https://api.ricardoneud.com/public/products/10/latest-version';
-$latestVersion = $appVersion;
-
-try {
-    $response = file_get_contents($apiUrl);
-    if ($response !== false) {
-        $data = json_decode($response, true);
-        if (isset($data['latest_version'])) {
-            $latestVersion = $data['latest_version'];
-        }
-    }
-} catch (Exception $e) {}
+$appVersion = 'v1.0';
 
 $stmt = $pdo->query("SELECT @@session.time_zone AS session_tz, @@system_time_zone AS system_tz");
 $tz = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -44,4 +32,3 @@ if ($lastRunRow && !empty($lastRunRow['last_run'])) {
 
 $minutesAgo = $lastRun ? round((time() - $lastRun->getTimestamp()) / 60) : null;
 $host = $_SERVER['HTTP_HOST'] ?? 'yourdomain.com';
-?>
