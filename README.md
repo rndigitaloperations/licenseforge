@@ -1,3 +1,5 @@
+[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://supportukrainenow.org/)
+
 # LicenseForge
 
 LicenseForge is a **self-hosted licensing and e-commerce platform** for selling digital products. It allows you to sell software licenses using one-time payments or subscriptions, while keeping full control over subscriptions, billing logic, and license management internally.
