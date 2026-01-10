@@ -44,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mysql = [
         'host' => trim($_POST['mysql_host'] ?? ''),
         'dbname' => trim($_POST['mysql_dbname'] ?? ''),
+        'dbport' => trim($_POST['mysql_dbport'] ?? ''),
         'username' => trim($_POST['mysql_username'] ?? ''),
         'password' => trim($_POST['mysql_password'] ?? ''),
         'charset' => trim($_POST['mysql_charset'] ?? 'utf8mb4'),
@@ -107,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!$errors) {
         try {
-            $dsn = "mysql:host={$mysql['host']};charset={$mysql['charset']}";
+            $dsn = "mysql:host={$mysql['host']};port={$mysql['dbport']};charset={$mysql['charset']}";
             $pdo = new PDO($dsn, $mysql['username'], $mysql['password'], [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             $pdo->exec("CREATE DATABASE IF NOT EXISTS `{$mysql['dbname']}` CHARACTER SET {$mysql['charset']} COLLATE {$mysql['charset']}_general_ci");
             $pdo->exec("USE `{$mysql['dbname']}`");
@@ -345,6 +346,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="space-y-4">
                                 <input type="text" name="mysql_host" value="localhost" placeholder="MySQL Host" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
                                 <input type="text" name="mysql_dbname" value="LicenseForge" placeholder="Database Name" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                                <input type="text" name="mysql_dbport" value="3306" placeholder="Database Port" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
                                 <input type="text" name="mysql_username" value="root" placeholder="Username" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
                                 <input type="password" name="mysql_password" placeholder="Password" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
                                 <input type="text" name="mysql_charset" placeholder="Charset" value="utf8mb4" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
