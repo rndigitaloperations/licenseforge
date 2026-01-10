@@ -69,7 +69,7 @@ The required cron command is displayed in the **admin dashboard**.
 3. Open your browser and navigate to:
 ```
 
-[https://yourdomain.tld/installer](https://yourdomain.tld/installer)
+https://yourdomain.tld/installer
 
 ```
 4. Follow the on-screen steps to complete the installation
