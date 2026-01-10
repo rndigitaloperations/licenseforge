@@ -49,14 +49,6 @@
             <div class="bg-gray-800 p-6 rounded-lg shadow">
                 <h2 class="text-2xl font-semibold mb-4">Application Version</h2>
                 <p class="mb-2">Current Version: <strong><?= $appVersion ?></strong></p>
-                <p>
-                    Status:
-                    <strong class="<?= $appVersion === $latestVersion ? 'text-green-400' : 'text-red-400' ?>">
-                        <?= $appVersion === $latestVersion
-                            ? 'Up to date'
-                            : "You are running $appVersion but the latest version is $latestVersion" ?>
-                    </strong>
-                </p>
             </div>
             <div
                 class="bg-gray-800 p-6 rounded-lg shadow cursor-pointer"
