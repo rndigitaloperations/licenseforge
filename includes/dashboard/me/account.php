@@ -58,12 +58,12 @@ foreach ($providers as $provider) {
     if ($provider === 'discord') {
         $scope = urlencode('identify email');
         $loginUrl = "https://discord.com/api/oauth2/authorize?client_id=$clientId&redirect_uri=$redirectUri&response_type=code&scope=$scope";
-        $logo = 'https://cdn.ricardoneud.com/products/LicenseForge/login/discord.png';
+        $logo = '/images/discord.png';
         $displayName = 'Discord';
     } elseif ($provider === 'google') {
         $scope = urlencode('openid email profile');
         $loginUrl = "https://accounts.google.com/o/oauth2/v2/auth?client_id=$clientId&redirect_uri=$redirectUri&response_type=code&scope=$scope";
-        $logo = 'https://cdn.ricardoneud.com/products/LicenseForge/login/google.png';
+        $logo = '/images/google.png';
         $displayName = 'Google';
     }
 

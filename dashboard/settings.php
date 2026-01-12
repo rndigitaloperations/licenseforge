@@ -63,7 +63,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/dashboard/settings.php';
                             <div class="bg-gray-700 p-5 rounded-lg flex flex-col gap-4">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-3">
-                                        <img src="https://cdn.ricardoneud.com/products/LicenseForge/payments/stripe.png" alt="Stripe" class="h-8 w-8" />
+                                        <img src="/images/stripe.png" alt="Stripe" class="h-8 w-8" />
                                         <h3 class="text-xl font-bold">Stripe</h3>
                                     </div>
                                     <label class="switch">
@@ -85,7 +85,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/dashboard/settings.php';
                             <div class="bg-gray-700 p-5 rounded-lg flex flex-col gap-4">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-3">
-                                        <img src="https://cdn.ricardoneud.com/products/LicenseForge/payments/paypal.png" alt="PayPal" class="h-8 w-8" />
+                                        <img src="/images/paypal.webp" alt="PayPal" class="h-8 w-8" />
                                         <h3 class="text-xl font-bold">PayPal</h3>
                                     </div>
                                     <label class="switch">
@@ -151,7 +151,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/dashboard/settings.php';
                             <div class="bg-gray-700 p-5 rounded-lg flex flex-col gap-4">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-3">
-                                        <img src="https://cdn.ricardoneud.com/products/LicenseForge/analytics/google.png" alt="Google" class="h-8 w-8" />
+                                        <img src="/images/GAnalytics.png" alt="Google" class="h-8 w-8" />
                                         <h3 class="text-xl font-bold">Google Analytics</h3>
                                     </div>
                                     <label class="switch">
@@ -168,7 +168,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/dashboard/settings.php';
                             <div class="bg-gray-700 p-5 rounded-lg flex flex-col gap-4">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-3">
-                                        <img src="https://cdn.ricardoneud.com/products/LicenseForge/analytics/cloudflare.png" alt="Cloudflare" class="h-8 w-8" />
+                                        <img src="/images/Cloudflare.png" alt="Cloudflare" class="h-8 w-8" />
                                         <h3 class="text-xl font-bold">Cloudflare Analytics</h3>
                                     </div>
                                     <label class="switch">
@@ -256,7 +256,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/dashboard/settings.php';
                             <div class="bg-gray-700 p-5 rounded-lg flex flex-col gap-4">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-3">
-                                        <img src="https://cdn.ricardoneud.com/products/LicenseForge/login/discord.png" alt="Discord" class="h-8 w-8" />
+                                        <img src="/images/discord.png" alt="Discord" class="h-8 w-8" />
                                         <h3 class="text-xl font-bold">Discord</h3>
                                     </div>
                                     <label class="switch">
@@ -278,7 +278,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/dashboard/settings.php';
                             <div class="bg-gray-700 p-5 rounded-lg flex flex-col gap-4">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-3">
-                                        <img src="https://cdn.ricardoneud.com/products/LicenseForge/login/google.png" alt="Google" class="h-8 w-8" />
+                                        <img src="/images/google.png" alt="Google" class="h-8 w-8" />
                                         <h3 class="text-xl font-bold">Google</h3>
                                     </div>
                                     <label class="switch">
