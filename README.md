@@ -72,11 +72,11 @@ The required cron command is displayed in the **admin dashboard**.
    In the **root folder** of the LicenseForge installation, create a directory named:
 
    ```
-   /downloads
+   downloads
    ```
 4. **Upload your digital products**
 
-   * Upload all sellable product files to the `/downloads` directory
+   * Upload all sellable product files to the `downloads` directory
    * **The filename must exactly match the product name**
    * Example:
      * Product name: `LicenseForge`
