@@ -68,20 +68,41 @@ The required cron command is displayed in the **admin dashboard**.
 
 1. Upload all LicenseForge files to your server
 2. Create a MySQL database
-3. Open your browser and navigate to:
-```
-https://yourdomain.tld/installer
-```
-4. Follow the on-screen steps to complete the installation
+3. **Create the downloads directory (required)**
+   In the **root folder** of the LicenseForge installation, create a directory named:
+
+   ```
+   /downloads
+   ```
+4. **Upload your digital products**
+
+   * Upload all sellable product files to the `/downloads` directory
+   * **The filename must exactly match the product name**
+   * Example:
+     * Product name: `LicenseForge`
+     * File name: `LicenseForge.zip`
+
+   **Supported file extensions (no code changes required):**
+   * `zip`
+   * `tar`
+   * `tar.gz`
+   * `rar`
+   * `7z`
+
+5. Open your browser and navigate to:
+   ```
+   https://yourdomain.tld/installer
+   ```
+6. Follow the on-screen steps to complete the installation
 
 ✅ After a successful installation:
-- The installer **automatically disables itself**
-- Accessing `/installer` will return a **404 page**
-- All configuration options you entered during installation are saved in **config.php**
-- You can **edit `config.php` manually later** to change database settings, mail settings, or other settings
+* The installer **automatically disables itself**
+* Accessing `/installer` will return a **404 page**
+* All configuration options you entered during installation are saved in **config.php**
+* You can **edit `config.php` manually later** to change database settings, mail settings, or other settings
 
-> ⚠️ **Note:**  
-> Before running the installer, accessing the application may result in a default  
+> ⚠️ **Note:**
+> Before running the installer, accessing the application may result in a default
 > **500 Internal Server Error**. This is expected behavior.
 
 ## ⚠️ Error Handling During Installation
